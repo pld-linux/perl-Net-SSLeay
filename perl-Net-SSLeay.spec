@@ -32,7 +32,7 @@ aplikacji.
 %patch0 -p0
 
 %build
-perl Makefile.PL %{_prefix}
+%{__perl} Makefile.PL %{_prefix}
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
