@@ -2,8 +2,8 @@
 Summary:	Net::SSLeay perl module
 Summary(pl):	Modu³ perla Net::SSLeay
 Name:		perl-Net-SSLeay
-Version:	1.09
-Release:	2
+Version:	1.16
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
@@ -45,10 +45,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %{perl_sitearch}/Net/SSLeay.pm
-%dir %{perl_sitearch}/auto/Net/SSLeay
-%{perl_sitearch}/auto/Net/SSLeay/autosplit.ix
-%{perl_sitearch}/auto/Net/SSLeay/*.al
-%{perl_sitearch}/auto/Net/SSLeay/SSLeay.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Net/SSLeay/SSLeay.so
+%{perl_sitearch}/Net/SSLeay
+%{perl_sitearch}/Net/ptrtstrun.pl
+%{perl_sitearch}/auto/Net/SSLeay
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
