@@ -2,15 +2,14 @@
 Summary:	Net-SSLeay perl module
 Summary(pl):	Modu³ perla Net-SSLeay
 Name:		perl-Net-SSLeay
-Version:	1.05
-Release:	3
+Version:	1.06
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
-Patch1:		%{name}-openssl_path.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	openssl-tools
 BuildRequires:	perl >= 5.6
@@ -28,10 +27,9 @@ Modul perla Net-SSLeay.
 %prep
 %setup -q -n Net_SSLeay.pm-%{version}
 %patch0 -p0
-%patch1 -p0
 
 %build
-perl Makefile.PL
+perl Makefile.PL /usr
 %{__make} OPTIMIZE="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
 
 %install
