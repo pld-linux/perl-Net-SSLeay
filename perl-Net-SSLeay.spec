@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
-Summary:	Net-SSLeay perl module
-Summary(pl):	Modu³ perla Net-SSLeay
+Summary:	Net::SSLeay perl module
+Summary(pl):	Modu³ perla Net::SSLeay
 Name:		perl-Net-SSLeay
 Version:	1.09
 Release:	2
@@ -15,10 +15,10 @@ BuildRequires:	openssl-devel >= 0.9.6a
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Net-SSLeay perl module.
+Net::SSLeay perl module.
 
 %description -l pl
-Modul perla Net-SSLeay.
+Modul perla Net::SSLeay.
 
 %prep
 %setup -q -n Net_SSLeay.pm-%{version}
