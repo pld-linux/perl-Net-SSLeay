@@ -1,0 +1,32 @@
+--- examples.path/bulk.pl	Tue Jan  5 02:13:32 1999
++++ examples/bulk.pl	Thu Feb 17 20:52:34 2000
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl -w
++#!/usr/bin/perl
+ # bulk.pl - 8.6.1998, Sampo Kellomaki <sampo@iki.fi>
+ # Send tons of stuff over SSL (just for testing).
+ # There's also an example about using the call back.
+--- examples.path/callback.pl	Sat Jul 31 09:49:09 1999
++++ examples/callback.pl	Thu Feb 17 20:52:34 2000
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl -w
++#!/usr/bin/perl
+ # callback.pl - 8.6.1998, Sampo Kellomaki <sampo@iki.fi>
+ # 31.7.1999, fixed callback args, --Sampo 
+ #
+--- examples.path/minicli.pl	Tue Jan  5 02:13:32 1999
++++ examples/minicli.pl	Thu Feb 17 20:52:34 2000
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!/usr/bin/perl
+ # minicli.pl - Sampo Kellomaki <sampo@iki.fi>
+ 
+ use Socket;
+--- examples.path/stdio_bulk.pl	Tue Jan  5 02:13:33 1999
++++ examples/stdio_bulk.pl	Thu Feb 17 20:52:35 2000
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!/usr/bin/perl
+ # stdio_bulk.pl - 8.6.1998, Sampo Kellomaki <sampo@iki.fi>
+ # Send tons of stuff over SSL connected by STDIO pipe.
+ # This also demonstrates how you can communicate via arbitrary strean, not
