@@ -6,8 +6,14 @@ Version:	1.09
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
+Group(cs):	Vývojové prostøedky/Programovací jazyky/Perl
 Group(de):	Entwicklung/Sprachen/Perl
+Group(es):	Desarrollo/Lenguajes/Perl
+Group(fr):	Development/Langues/Perl
+Group(ja):	³«È¯/¸À¸ì/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
+Group(pt):	Desenvolvimento/Linguagens/Perl
+Group(ru):	òÁÚÒÁÂÏÔËÁ/ñÚÙËÉ/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-18
@@ -27,7 +33,7 @@ Modul perla Net-SSLeay.
 %patch0 -p0
 
 %build
-perl Makefile.PL /usr
+perl Makefile.PL %{_prefix}
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
