@@ -15,13 +15,17 @@ BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module offers some high level convinience functions for accessing web
-pages on SSL servers, a sslcat() function for writing your own clients,
-and finally access to the SSL api of SSLeay/OpenSSL package so you can
-write servers or clients for more complicated applications.
+This module offers some high level convinience functions for accessing
+web pages on SSL servers, a sslcat() function for writing your own
+clients, and finally access to the SSL api of SSLeay/OpenSSL package
+so you can write servers or clients for more complicated applications.
 
-# %description -l pl
-# TODO
+%description -l pl
+Ten modu³ oferuje kilka wygodnych funkcji wysokiego poziomu s³u¿±cych
+do dostêpu do stron WWW na serwerach SSL, funkcjê sslcat() do pisania
+w³asnych klientów, oraz dostêp do API SSL pakietu SSLeay/OpenSSL, co
+pozwala na pisanie serwerów lub klientów dla bardziej skomplikowanych
+aplikacji.
 
 %prep
 %setup -q -n Net_SSLeay.pm-%{version}
