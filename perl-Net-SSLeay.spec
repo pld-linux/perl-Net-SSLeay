@@ -2,8 +2,8 @@
 Summary:	Net-SSLeay perl module
 Summary(pl):	Modu³ perla Net-SSLeay
 Name:		perl-Net-SSLeay
-Version:	1.07
-Release:	2
+Version:	1.08
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
