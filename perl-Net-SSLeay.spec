@@ -3,7 +3,7 @@ Summary:	Net::SSLeay perl module
 Summary(pl):	Modu³ perla Net::SSLeay
 Name:		perl-Net-SSLeay
 Version:	1.18
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
