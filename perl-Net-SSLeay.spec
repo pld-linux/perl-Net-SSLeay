@@ -3,7 +3,7 @@ Summary:	Net-SSLeay perl module
 Summary(pl):	Modu³ perla Net-SSLeay
 Name:		perl-Net-SSLeay
 Version:	1.08
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -36,7 +36,7 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+install examples/*.{pl,conf} $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 gzip -9nf Changes README
 
