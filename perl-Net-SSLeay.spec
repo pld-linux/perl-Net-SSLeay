@@ -15,7 +15,7 @@ Patch0:		%{name}-paths.patch
 BuildRequires:	openssl-devel >= 0.9.6i
 BuildRequires:	openssl-tools >= 0.9.6i
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	rpm-perlprov >= 3.0.3-18
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
