@@ -6,7 +6,7 @@ Version:	1.21
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
 BuildRequires:	openssl-devel >= 0.9.7
 BuildRequires:	openssl-tools >= 0.9.7
