@@ -3,7 +3,7 @@ Summary:	Net-SSLeay perl module
 Summary(pl):	Modu³ perla Net-SSLeay
 Name:		perl-Net-SSLeay
 Version:	1.07
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -13,7 +13,7 @@ Patch0:		%{name}-paths.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	openssl-tools
 BuildRequires:	perl >= 5.6
-BuildRequires:	openssl-devel >= 0.9.4-2
+BuildRequires:	openssl-devel >= 0.9.6a
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
