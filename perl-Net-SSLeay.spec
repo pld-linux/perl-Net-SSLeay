@@ -7,7 +7,7 @@ Summary:	Net::SSLeay - Perl extension for using OpenSSL or SSLeay
 Summary(pl):	Net::SSLeay - rozszerzenie perla do u¿ywania OpenSSL lub SSLeay
 Name:		perl-Net-SSLeay
 Version:	1.22
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
@@ -15,7 +15,7 @@ Patch0:		%{name}-paths.patch
 BuildRequires:	openssl-devel >= 0.9.7
 BuildRequires:	openssl-tools >= 0.9.7
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	rpm-perlprov >= 3.0.3-18
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,7 +36,8 @@ aplikacji.
 %patch0 -p0
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL %{_prefix} \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %{?_with_tests:%{__make} test}
@@ -55,13 +56,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes Credits README
-%{perl_sitearch}/Net/SSLeay.pm
-%{perl_sitearch}/Net/SSLeay
-%{perl_sitearch}/Net/ptrtstrun.pl
-%dir %{perl_sitearch}/auto/Net/SSLeay
-%{perl_sitearch}/auto/Net/SSLeay/autosplit.ix
-%{perl_sitearch}/auto/Net/SSLeay/*.al
-%{perl_sitearch}/auto/Net/SSLeay/*.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Net/SSLeay/*.so
+%{perl_vendorarch}/Net/SSLeay.pm
+%{perl_vendorarch}/Net/SSLeay
+%{perl_vendorarch}/Net/ptrtstrun.pl
+%dir %{perl_vendorarch}/auto/Net/SSLeay
+%{perl_vendorarch}/auto/Net/SSLeay/autosplit.ix
+%{perl_vendorarch}/auto/Net/SSLeay/*.al
+%{perl_vendorarch}/auto/Net/SSLeay/*.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Net/SSLeay/*.so
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
