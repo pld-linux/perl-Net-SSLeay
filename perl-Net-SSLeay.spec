@@ -8,17 +8,17 @@ License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
-BuildRequires:	rpm-perlprov >= 3.0.3-18
+BuildRequires:	openssl-devel >= 0.9.6a
 BuildRequires:	openssl-tools
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	openssl-devel >= 0.9.6a
+BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Net::SSLeay perl module.
 
 %description -l pl
-Modul perla Net::SSLeay.
+Modu³ perla Net::SSLeay.
 
 %prep
 %setup -q -n Net_SSLeay.pm-%{version}
@@ -36,14 +36,12 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 install examples/*.{pl,conf} $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-gzip -9nf Changes README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes README
 %{perl_sitearch}/Net/SSLeay.pm
 %{perl_sitearch}/Net/SSLeay
 %{perl_sitearch}/Net/ptrtstrun.pl
