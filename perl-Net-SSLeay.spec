@@ -14,8 +14,6 @@ BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	openssl-tools
 BuildRequires:	perl >= 5.6
 BuildRequires:	openssl-devel >= 0.9.4-2
-%requires_eq	perl
-Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
