@@ -13,8 +13,8 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
 # Source0-md5:	87de8a06802fbb63c7c85e89eedbe139
 Patch0:		%{name}-paths.patch
-BuildRequires:	openssl-devel >= 0.9.7c
-BuildRequires:	openssl-tools >= 0.9.7c
+BuildRequires:	openssl-devel >= 0.9.7d
+BuildRequires:	openssl-tools >= 0.9.7d
 BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
