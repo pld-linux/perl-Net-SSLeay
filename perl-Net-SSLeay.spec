@@ -7,7 +7,7 @@ Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
 Patch0:		perl-Net-SSLeay-paths.patch
 Patch1:		perl-Net-SSLeay-openssl_path.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-18
@@ -34,10 +34,10 @@ make OPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}
+install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 
 make install DESTDIR=$RPM_BUILD_ROOT
-install examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}
+install examples/* $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 
 strip --strip-unneeded $RPM_BUILD_ROOT/%{perl_sitearch}/auto/Net/SSLeay/*.so
 
@@ -68,4 +68,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_mandir}/man3/*
 
-/usr/src/examples/%{name}
+%{_prefix}/src/examples/%{name}
