@@ -11,6 +11,7 @@ Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
+# Source0-md5:	dd96a6d6fc984f7c922fa2a251585ae4
 Patch0:		%{name}-paths.patch
 BuildRequires:	openssl-devel >= 0.9.7
 BuildRequires:	openssl-tools >= 0.9.7
