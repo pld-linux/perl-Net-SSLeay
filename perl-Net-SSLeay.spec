@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
-Summary:	Net::SSLeay perl module
-Summary(pl):	Modu³ perla Net::SSLeay
+Summary:	Net::SSLeay - Perl extension for using OpenSSL or SSLeay
+Summary(pl):	Net::SSLeay - rozszerzenie perla do u¿ywania OpenSSL lub SSLeay
 Name:		perl-Net-SSLeay
-Version:	1.18
+Version:	1.20
 Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
@@ -15,10 +15,13 @@ BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Net::SSLeay perl module.
+This module offers some high level convinience functions for accessing web
+pages on SSL servers, a sslcat() function for writing your own clients,
+and finally access to the SSL api of SSLeay/OpenSSL package so you can
+write servers or clients for more complicated applications.
 
-%description -l pl
-Modu³ perla Net::SSLeay.
+# %description -l pl
+# TODO
 
 %prep
 %setup -q -n Net_SSLeay.pm-%{version}
