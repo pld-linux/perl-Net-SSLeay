@@ -14,7 +14,7 @@ Source0:	http://www.cpan.org/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.
 Patch0:		%{name}-paths.patch
 BuildRequires:	openssl-devel >= 0.9.7
 BuildRequires:	openssl-tools >= 0.9.7
-BuildRequires:	perl >= 5.6.1
+BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
