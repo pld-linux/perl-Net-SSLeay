@@ -8,7 +8,8 @@ Summary(pl):	Net::SSLeay - rozszerzenie Perla do u¿ywania OpenSSL lub SSLeay
 Name:		perl-Net-SSLeay
 Version:	1.25
 Release:	1
-License:	GPL
+# same as openssl
+License:	Apache-style License
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
 # Source0-md5:	87de8a06802fbb63c7c85e89eedbe139
@@ -50,7 +51,6 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
 install examples/*.{pl,conf} $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
