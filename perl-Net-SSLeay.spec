@@ -38,7 +38,7 @@ aplikacji.
 
 %build
 %{__perl} Makefile.PL %{_prefix} \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
 
