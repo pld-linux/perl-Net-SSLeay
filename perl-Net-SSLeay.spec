@@ -8,8 +8,8 @@ License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
-BuildRequires:	openssl-devel >= 0.9.6a
-BuildRequires:	openssl-tools
+BuildRequires:	openssl-devel >= 0.9.7
+BuildRequires:	openssl-tools >= 0.9.7
 BuildRequires:	perl >= 5.6.1
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
