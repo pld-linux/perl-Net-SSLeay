@@ -12,6 +12,7 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/Net_SSLeay.pm-%{versi
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-openssl_path.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-18
+BuildRequires:	openssl-tools
 BuildRequires:	perl >= 5.6
 BuildRequires:	openssl-devel >= 0.9.4-2
 %requires_eq	perl
