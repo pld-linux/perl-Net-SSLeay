@@ -1,8 +1,12 @@
+#
+# Conditional build:
+# _with_tests - perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 Summary:	Net::SSLeay - Perl extension for using OpenSSL or SSLeay
 Summary(pl):	Net::SSLeay - rozszerzenie perla do u¿ywania OpenSSL lub SSLeay
 Name:		perl-Net-SSLeay
-Version:	1.21
+Version:	1.22
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
@@ -32,8 +36,10 @@ aplikacji.
 %patch0 -p0
 
 %build
-%{__perl} Makefile.PL %{_prefix}
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
+
+%{?_with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -48,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
+%doc Changes Credits README
 %{perl_sitearch}/Net/SSLeay.pm
 %{perl_sitearch}/Net/SSLeay
 %{perl_sitearch}/Net/ptrtstrun.pl
