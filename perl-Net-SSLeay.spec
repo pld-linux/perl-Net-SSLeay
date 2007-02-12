@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Net::SSLeay - Perl extension for using OpenSSL or SSLeay
-Summary(pl):	Net::SSLeay - rozszerzenie Perla do u¿ywania OpenSSL lub SSLeay
+Summary(pl.UTF-8):   Net::SSLeay - rozszerzenie Perla do uÅ¼ywania OpenSSL lub SSLeay
 Name:		perl-Net-SSLeay
 Version:	1.25
 Release:	3
@@ -26,11 +26,11 @@ web pages on SSL servers, a sslcat() function for writing your own
 clients, and finally access to the SSL api of SSLeay/OpenSSL package
 so you can write servers or clients for more complicated applications.
 
-%description -l pl
-Ten modu³ oferuje kilka wygodnych funkcji wysokiego poziomu s³u¿±cych
-do dostêpu do stron WWW na serwerach SSL, funkcjê sslcat() do pisania
-w³asnych klientów, oraz dostêp do API SSL pakietu SSLeay/OpenSSL, co
-pozwala na pisanie serwerów lub klientów dla bardziej skomplikowanych
+%description -l pl.UTF-8
+Ten moduÅ‚ oferuje kilka wygodnych funkcji wysokiego poziomu sÅ‚uÅ¼Ä…cych
+do dostÄ™pu do stron WWW na serwerach SSL, funkcjÄ™ sslcat() do pisania
+wÅ‚asnych klientÃ³w, oraz dostÄ™p do API SSL pakietu SSLeay/OpenSSL, co
+pozwala na pisanie serwerÃ³w lub klientÃ³w dla bardziej skomplikowanych
 aplikacji.
 
 %prep
