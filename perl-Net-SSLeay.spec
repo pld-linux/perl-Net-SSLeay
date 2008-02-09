@@ -9,7 +9,7 @@ Name:		perl-Net-SSLeay
 Version:	1.30
 Release:	3
 # same as openssl
-License:	Apache-style License
+License:	Apache-like
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
 # Source0-md5:	b0cd6c1681bbc0695d81be5cd852d1d0
