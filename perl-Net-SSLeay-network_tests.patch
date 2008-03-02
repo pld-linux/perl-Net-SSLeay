@@ -1,0 +1,29 @@
+--- Net_SSLeay.pm-1.30/test.pl~	2005-12-01 02:20:34.000000000 +0000
++++ Net_SSLeay.pm-1.30/test.pl	2008-03-02 17:49:19.793005231 +0000
+@@ -163,6 +163,11 @@
+ 					&Net::SSLeay::FILETYPE_PEM());
+ print &test(13, $r);
+ 
++# skip network tests
++print "ok $_ # skip network test\n" for 14..20;
++
++__END__
++
+ #app.iplanet.com
+ my @sites = qw(
+ www.cdw.com
+--- Net_SSLeay.pm-1.30/Net-SSLeay-Handle-0.50/test.pl~	2005-11-30 09:46:47.000000000 +0000
++++ Net_SSLeay.pm-1.30/Net-SSLeay-Handle-0.50/test.pl	2008-03-02 17:50:13.289328551 +0000
+@@ -26,8 +26,10 @@
+ #    www.openssl.org
+ #    www.engelschall.com
+ 
+-test_2();
+-test_3();
++# network tests; ignore...
++print "ok $_ # skip network test\n" for 2..3;
++#test_2();
++#test_3();
+ 
+ #== Test 2 ====================================================================
+ #
