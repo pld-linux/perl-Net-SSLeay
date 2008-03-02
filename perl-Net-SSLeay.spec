@@ -7,13 +7,14 @@ Summary:	Net::SSLeay - Perl extension for using OpenSSL or SSLeay
 Summary(pl.UTF-8):	Net::SSLeay - rozszerzenie Perla do używania OpenSSL lub SSLeay
 Name:		perl-Net-SSLeay
 Version:	1.30
-Release:	3
+Release:	4
 # same as openssl
 License:	Apache-like
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
 # Source0-md5:	b0cd6c1681bbc0695d81be5cd852d1d0
 Patch0:		%{name}-paths.patch
+Patch1:		%{name}-network_tests.patch
 URL:		http://search.cpan.org/dist/Net_SSLeay.pm/
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	openssl-tools >= 0.9.7d
@@ -37,6 +38,7 @@ aplikacji.
 %prep
 %setup -q -n Net_SSLeay.pm-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__perl} Makefile.PL %{_prefix} \
