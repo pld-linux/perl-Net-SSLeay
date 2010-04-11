@@ -1,102 +1,102 @@
-diff -Naur Net_SSLeay.pm-1.22.orig/SSLeay.pm Net_SSLeay.pm-1.22/SSLeay.pm
---- Net_SSLeay.pm-1.22.orig/SSLeay.pm	Sat Jun 14 00:04:55 2003
-+++ Net_SSLeay.pm-1.22/SSLeay.pm	Sat Jun 14 00:07:31 2003
-@@ -1016,7 +1016,7 @@
- 
- Following is a simple SSLeay client (with too little error checking :-(
- 
--    #!/usr/local/bin/perl
-+    #!/usr/bin/perl
-     use Socket;
-     use Net::SSLeay qw(die_now die_if_ssl_error) ;
-     Net::SSLeay::load_error_strings();
-@@ -1057,7 +1057,7 @@
- 
- Following is a simple SSLeay echo server (non forking):
- 
--    #!/usr/local/bin/perl -w
-+    #!/usr/bin/perl -w
-     use Socket;
-     use Net::SSLeay qw(die_now die_if_ssl_error);
-     Net::SSLeay::load_error_strings();
-@@ -1120,7 +1120,7 @@
- it had better be without any encryption or else it will not know where
- to ask for the password. Note how STDIN and STDOUT are wired to SSL.
- 
--    #!/usr/local/bin/perl
-+    #!/usr/bin/perl
-     # /etc/inetd.conf
-     #    ssltst stream tcp nowait root /path/to/server.pl server.pl
-     # /etc/services
-diff -Naur Net_SSLeay.pm-1.22.orig/examples/bio.pl Net_SSLeay.pm-1.22/examples/bio.pl
---- Net_SSLeay.pm-1.22.orig/examples/bio.pl	Sat Jun 14 00:04:55 2003
-+++ Net_SSLeay.pm-1.22/examples/bio.pl	Sat Jun 14 00:11:24 2003
+diff -urN Net-SSLeay-1.36.org/examples/bio.pl Net-SSLeay-1.36/examples/bio.pl
+--- Net-SSLeay-1.36.org/examples/bio.pl	2007-10-16 10:26:45.000000000 +0200
++++ Net-SSLeay-1.36/examples/bio.pl	2010-04-11 11:23:59.500407002 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl -w
 +#!/usr/bin/perl -w
  # bio.pl mikem@open.com.au
  #
  # Test and demonstrate BIO interface
-diff -Naur Net_SSLeay.pm-1.22.orig/examples/bulk.pl Net_SSLeay.pm-1.22/examples/bulk.pl
---- Net_SSLeay.pm-1.22.orig/examples/bulk.pl	Sat Jun 14 00:04:55 2003
-+++ Net_SSLeay.pm-1.22/examples/bulk.pl	Sat Jun 14 00:05:03 2003
+diff -urN Net-SSLeay-1.36.org/examples/bulk.pl Net-SSLeay-1.36/examples/bulk.pl
+--- Net-SSLeay-1.36.org/examples/bulk.pl	2007-10-16 10:26:45.000000000 +0200
++++ Net-SSLeay-1.36/examples/bulk.pl	2010-04-11 11:23:59.503115868 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl -w
-+#!/usr/bin/perl
++#!/usr/bin/perl -w
  # bulk.pl - 8.6.1998, Sampo Kellomaki <sampo@iki.fi>
  # Send tons of stuff over SSL (just for testing).
  # There's also an example about using the call back.
-diff -Naur Net_SSLeay.pm-1.22.orig/examples/callback.pl Net_SSLeay.pm-1.22/examples/callback.pl
---- Net_SSLeay.pm-1.22.orig/examples/callback.pl	Sat Jun 14 00:04:55 2003
-+++ Net_SSLeay.pm-1.22/examples/callback.pl	Sat Jun 14 00:05:03 2003
+diff -urN Net-SSLeay-1.36.org/examples/callback.pl Net-SSLeay-1.36/examples/callback.pl
+--- Net-SSLeay-1.36.org/examples/callback.pl	2007-10-16 10:26:45.000000000 +0200
++++ Net-SSLeay-1.36/examples/callback.pl	2010-04-11 11:23:59.503115868 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl -w
-+#!/usr/bin/perl
++#!/usr/bin/perl -w
  # callback.pl - 8.6.1998, Sampo Kellomaki <sampo@iki.fi>
  # 31.7.1999, fixed callback args, --Sampo 
  # 7.4.2001,  adapted to 0.9.6a and numerous bug reports --Sampo
-diff -Naur Net_SSLeay.pm-1.22.orig/examples/cli-cert.pl Net_SSLeay.pm-1.22/examples/cli-cert.pl
---- Net_SSLeay.pm-1.22.orig/examples/cli-cert.pl	Sat Jun 14 00:04:55 2003
-+++ Net_SSLeay.pm-1.22/examples/cli-cert.pl	Sat Jun 14 00:11:24 2003
+diff -urN Net-SSLeay-1.36.org/examples/cli-cert.pl Net-SSLeay-1.36/examples/cli-cert.pl
+--- Net-SSLeay-1.36.org/examples/cli-cert.pl	2007-10-16 10:26:45.000000000 +0200
++++ Net-SSLeay-1.36/examples/cli-cert.pl	2010-04-11 11:23:59.503115868 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl
 +#!/usr/bin/perl
  # cli-cert.pl
  # 8.6.1998, originally written as stdio_bulk.pl Sampo Kellomaki <sampo@iki.fi>
  # 8.12.2001, adapted to test client certificates
-diff -Naur Net_SSLeay.pm-1.22.orig/examples/ephemeral.pl Net_SSLeay.pm-1.22/examples/ephemeral.pl
---- Net_SSLeay.pm-1.22.orig/examples/ephemeral.pl	Sat Jun 14 00:04:55 2003
-+++ Net_SSLeay.pm-1.22/examples/ephemeral.pl	Sat Jun 14 00:11:24 2003
+diff -urN Net-SSLeay-1.36.org/examples/ephemeral.pl Net-SSLeay-1.36/examples/ephemeral.pl
+--- Net-SSLeay-1.36.org/examples/ephemeral.pl	2007-10-16 10:26:45.000000000 +0200
++++ Net-SSLeay-1.36/examples/ephemeral.pl	2010-04-11 11:23:59.503115868 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl -w
 +#!/usr/bin/perl -w
  # ephemeral.pl mikem@open.com.au
  #
  # Test and demonstrate setting ephemeral RSA key
-diff -Naur Net_SSLeay.pm-1.22.orig/examples/minicli.pl Net_SSLeay.pm-1.22/examples/minicli.pl
---- Net_SSLeay.pm-1.22.orig/examples/minicli.pl	Sat Jun 14 00:04:55 2003
-+++ Net_SSLeay.pm-1.22/examples/minicli.pl	Sat Jun 14 00:05:03 2003
+diff -urN Net-SSLeay-1.36.org/examples/minicli.pl Net-SSLeay-1.36/examples/minicli.pl
+--- Net-SSLeay-1.36.org/examples/minicli.pl	2007-10-16 10:26:45.000000000 +0200
++++ Net-SSLeay-1.36/examples/minicli.pl	2010-04-11 11:23:59.507073715 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl
 +#!/usr/bin/perl
  # minicli.pl - Sampo Kellomaki <sampo@iki.fi>
  
  use Socket;
-diff -Naur Net_SSLeay.pm-1.22.orig/examples/passwd-cb.pl Net_SSLeay.pm-1.22/examples/passwd-cb.pl
---- Net_SSLeay.pm-1.22.orig/examples/passwd-cb.pl	Sat Jun 14 00:04:55 2003
-+++ Net_SSLeay.pm-1.22/examples/passwd-cb.pl	Sat Jun 14 00:11:24 2003
+diff -urN Net-SSLeay-1.36.org/examples/passwd-cb.pl Net-SSLeay-1.36/examples/passwd-cb.pl
+--- Net-SSLeay-1.36.org/examples/passwd-cb.pl	2007-10-16 10:26:45.000000000 +0200
++++ Net-SSLeay-1.36/examples/passwd-cb.pl	2010-04-11 11:23:59.507073715 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl
 +#!/usr/bin/perl
  # passwd-cb.pl
  #
  # Check using password callbacks to decrypt private keys
-diff -Naur Net_SSLeay.pm-1.22.orig/examples/stdio_bulk.pl Net_SSLeay.pm-1.22/examples/stdio_bulk.pl
---- Net_SSLeay.pm-1.22.orig/examples/stdio_bulk.pl	Sat Jun 14 00:04:55 2003
-+++ Net_SSLeay.pm-1.22/examples/stdio_bulk.pl	Sat Jun 14 00:05:03 2003
+diff -urN Net-SSLeay-1.36.org/examples/stdio_bulk.pl Net-SSLeay-1.36/examples/stdio_bulk.pl
+--- Net-SSLeay-1.36.org/examples/stdio_bulk.pl	2007-10-16 10:26:45.000000000 +0200
++++ Net-SSLeay-1.36/examples/stdio_bulk.pl	2010-04-11 11:23:59.507073715 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl
 +#!/usr/bin/perl
  # stdio_bulk.pl - 8.6.1998, Sampo Kellomaki <sampo@iki.fi>
  # Send tons of stuff over SSL connected by STDIO pipe.
  # This also demonstrates how you can communicate via arbitrary stream, not
+diff -urN Net-SSLeay-1.36.org/lib/Net/SSLeay.pm Net-SSLeay-1.36/lib/Net/SSLeay.pm
+--- Net-SSLeay-1.36.org/lib/Net/SSLeay.pm	2010-01-30 22:07:38.000000000 +0100
++++ Net-SSLeay-1.36/lib/Net/SSLeay.pm	2010-04-11 11:25:10.780816683 +0200
+@@ -1304,7 +1304,7 @@
+ 
+ The following is a simple SSLeay client (with too little error checking :-(
+ 
+-    #!/usr/local/bin/perl
++    #!/usr/bin/perl
+     use Socket;
+     use Net::SSLeay qw(die_now die_if_ssl_error) ;
+     Net::SSLeay::load_error_strings();
+@@ -1345,7 +1345,7 @@
+ 
+ The following is a simple SSLeay echo server (non forking):
+ 
+-    #!/usr/local/bin/perl -w
++    #!/usr/bin/perl -w
+     use Socket;
+     use Net::SSLeay qw(die_now die_if_ssl_error);
+     Net::SSLeay::load_error_strings();
+@@ -1408,7 +1408,7 @@
+ it had better be without any encryption or else it will not know where
+ to ask for the password. Note how C<STDIN> and C<STDOUT> are wired to SSL.
+ 
+-    #!/usr/local/bin/perl
++    #!/usr/bin/perl
+     # /etc/inetd.conf
+     #    ssltst stream tcp nowait root /path/to/server.pl server.pl
+     # /etc/services

@@ -6,16 +6,15 @@
 Summary:	Net::SSLeay - Perl extension for using OpenSSL or SSLeay
 Summary(pl.UTF-8):	Net::SSLeay - rozszerzenie Perla do używania OpenSSL lub SSLeay
 Name:		perl-Net-SSLeay
-Version:	1.30
-Release:	6
+Version:	1.36
+Release:	1
 # same as openssl
 License:	Apache-like
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Net/Net_SSLeay.pm-%{version}.tar.gz
-# Source0-md5:	b0cd6c1681bbc0695d81be5cd852d1d0
+Source0:	http://search.cpan.org/CPAN/authors/id/F/FL/FLORA/Net-SSLeay-%{version}.tar.gz
+# Source0-md5:	54061638720dd6a325395331c77f21d8
 Patch0:		%{name}-paths.patch
-Patch1:		%{name}-network_tests.patch
-URL:		http://search.cpan.org/dist/Net_SSLeay.pm/
+URL:		http://search.cpan.org/dist/Net_SSLeay/
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	openssl-tools >= 0.9.7d
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -36,18 +35,17 @@ pozwala na pisanie serwerów lub klientów dla bardziej skomplikowanych
 aplikacji.
 
 %prep
-%setup -q -n Net_SSLeay.pm-%{version}
+%setup -q -n Net-SSLeay-%{version}
 %patch0 -p1
-%patch1 -p1
 
 %build
-%{__perl} Makefile.PL %{_prefix} \
+echo "n" | %{__perl} Makefile.PL %{_prefix} \
 	INSTALLDIRS=vendor
 %{__make} \
 	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 
-%{?with_tests:%{__make} test}
+%{?with_tests:echo "n" | %{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -66,7 +64,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes Credits README
 %{perl_vendorarch}/Net/SSLeay.pm
 %{perl_vendorarch}/Net/SSLeay
-%{perl_vendorarch}/Net/ptrtstrun.pl
 %dir %{perl_vendorarch}/auto/Net/SSLeay
 %{perl_vendorarch}/auto/Net/SSLeay/autosplit.ix
 %{perl_vendorarch}/auto/Net/SSLeay/*.al
