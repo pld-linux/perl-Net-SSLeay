@@ -14,7 +14,8 @@ Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/F/FL/FLORA/Net-SSLeay-%{version}.tar.gz
 # Source0-md5:	54061638720dd6a325395331c77f21d8
 Patch0:		%{name}-paths.patch
-URL:		http://search.cpan.org/dist/Net_SSLeay/
+Patch1:		%{name}-no_zlib.patch
+URL:		http://search.cpan.org/dist/Net-SSLeay/
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	openssl-tools >= 0.9.7d
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -37,6 +38,7 @@ aplikacji.
 %prep
 %setup -q -n Net-SSLeay-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 echo "n" | %{__perl} Makefile.PL %{_prefix} \
