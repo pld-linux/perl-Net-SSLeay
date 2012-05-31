@@ -6,20 +6,23 @@
 Summary:	Net::SSLeay - Perl extension for using OpenSSL or SSLeay
 Summary(pl.UTF-8):	Net::SSLeay - rozszerzenie Perla do używania OpenSSL lub SSLeay
 Name:		perl-Net-SSLeay
-Version:	1.36
-Release:	5
+Version:	1.48
+Release:	1
 # same as openssl
 License:	Apache-like
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/F/FL/FLORA/Net-SSLeay-%{version}.tar.gz
-# Source0-md5:	54061638720dd6a325395331c77f21d8
-Patch0:		%{name}-paths.patch
-Patch1:		%{name}-no_zlib.patch
+Source0:	http://www.cpan.org/modules/by-module/Net/Net-SSLeay-%{version}.tar.gz
+# Source0-md5:	4e10d9da28f26732e37807820bf72af5
+Patch0:		%{name}-no_zlib.patch
 URL:		http://search.cpan.org/dist/Net-SSLeay/
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	openssl-tools >= 0.9.7d
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	perl-MIME-Base64
+BuildRequires:	perl-Test-Simple >= 0.60_01
+%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,7 +41,6 @@ aplikacji.
 %prep
 %setup -q -n Net-SSLeay-%{version}
 %patch0 -p1
-%patch1 -p1
 
 %build
 echo "n" | %{__perl} Makefile.PL %{_prefix} \
@@ -58,6 +60,8 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 install examples/*.{pl,conf} $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/Net/SSLeay.pod
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -69,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Net/SSLeay
 %{perl_vendorarch}/auto/Net/SSLeay/autosplit.ix
 %{perl_vendorarch}/auto/Net/SSLeay/*.al
-%{perl_vendorarch}/auto/Net/SSLeay/*.bs
-%attr(755,root,root) %{perl_vendorarch}/auto/Net/SSLeay/*.so
-%{_mandir}/man3/*
+%{perl_vendorarch}/auto/Net/SSLeay/SSLeay.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Net/SSLeay/SSLeay.so
+%{_mandir}/man3/Net::SSLeay*.3pm*
 %{_examplesdir}/%{name}-%{version}
