@@ -73,7 +73,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Net/SSLeay
 %{perl_vendorarch}/auto/Net/SSLeay/autosplit.ix
 %{perl_vendorarch}/auto/Net/SSLeay/*.al
-%{perl_vendorarch}/auto/Net/SSLeay/SSLeay.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Net/SSLeay/SSLeay.so
 %{_mandir}/man3/Net::SSLeay*.3pm*
 %{_examplesdir}/%{name}-%{version}
