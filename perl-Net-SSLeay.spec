@@ -8,8 +8,7 @@ Summary(pl.UTF-8):	Net::SSLeay - rozszerzenie Perla do używania OpenSSL lub SSL
 Name:		perl-Net-SSLeay
 Version:	1.66
 Release:	1
-# new license since 1.66
-License:	Perl Artistic License 2.0
+License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/Net-SSLeay-%{version}.tar.gz
 # Source0-md5:	d18646abb41011607cbb0046c4fb0426
