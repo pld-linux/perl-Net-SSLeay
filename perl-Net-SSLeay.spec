@@ -6,12 +6,12 @@
 Summary:	Net::SSLeay - Perl extension for using OpenSSL or SSLeay
 Summary(pl.UTF-8):	Net::SSLeay - rozszerzenie Perla do używania OpenSSL lub SSLeay
 Name:		perl-Net-SSLeay
-Version:	1.78
+Version:	1.80
 Release:	1
 License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/Net-SSLeay-%{version}.tar.gz
-# Source0-md5:	161f2f5606858b129408ef1508b3b55f
+# Source0-md5:	b1e0fd96d7f3be57580377226ca5f089
 Patch0:		%{name}-no_zlib.patch
 URL:		http://search.cpan.org/dist/Net-SSLeay/
 BuildRequires:	openssl-devel >= 0.9.7d
