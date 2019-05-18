@@ -1,7 +1,8 @@
---- Net-SSLeay-1.36/inc/Module/Install/PRIVATE/Net/SSLeay.pm~	2011-01-30 01:12:37.300174420 +0100
-+++ Net-SSLeay-1.36/inc/Module/Install/PRIVATE/Net/SSLeay.pm	2011-01-30 01:12:42.141086087 +0100
-@@ -95,8 +95,8 @@
-         $opts->{optimize} = '-O2 -g';
+diff -urN Net-SSLeay-1.88.orig/Makefile.PL Net-SSLeay-1.88/Makefile.PL
+--- Net-SSLeay-1.88.orig/Makefile.PL	2019-05-18 19:21:44.521823269 +0200
++++ Net-SSLeay-1.88/Makefile.PL	2019-05-18 19:22:01.825050519 +0200
+@@ -202,8 +202,8 @@
+     else {
          push @{ $opts->{lib_links} },
               ($rsaref
 -              ? qw( ssl crypto RSAglue rsaref z )
