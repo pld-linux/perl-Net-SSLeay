@@ -12,11 +12,12 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/Net-SSLeay-%{version}.tar.gz
 # Source0-md5:	fcef4985f5f7e0381e3dddd0ee7878d1
 Patch0:		%{name}-no_zlib.patch
-URL:		http://search.cpan.org/dist/Net-SSLeay/
+URL:		https://metacpan.org/release/Net-SSLeay
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	openssl-tools >= 0.9.7d
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-Test-Simple >= 0.60_01
