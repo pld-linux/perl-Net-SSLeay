@@ -1,14 +1,11 @@
-diff -urN Net-SSLeay-1.88.orig/Makefile.PL Net-SSLeay-1.88/Makefile.PL
---- Net-SSLeay-1.88.orig/Makefile.PL	2019-05-18 19:21:44.521823269 +0200
-+++ Net-SSLeay-1.88/Makefile.PL	2019-05-18 19:22:01.825050519 +0200
-@@ -202,8 +202,8 @@
+--- Net-SSLeay-1.90/Makefile.PL.orig	2021-01-25 23:11:02.914376206 +0100
++++ Net-SSLeay-1.90/Makefile.PL	2021-01-25 23:12:16.960697258 +0100
+@@ -209,7 +209,7 @@
+         @{ $opts->{lib_links} } = map { $_ =~ s/32\b//g } @{ $opts->{lib_links} } if $Config{use64bitall};
+     }
      else {
-         push @{ $opts->{lib_links} },
-              ($rsaref
--              ? qw( ssl crypto RSAglue rsaref z )
--              : qw( ssl crypto z )
-+              ? qw( ssl crypto RSAglue rsaref )
-+              : qw( ssl crypto )
-              );
+-        push @{ $opts->{lib_links} }, qw( ssl crypto z );
++        push @{ $opts->{lib_links} }, qw( ssl crypto );
  
          if (($Config{cc} =~ /aCC/i) && $^O eq 'hpux') {
+             print "*** Enabling HPUX aCC options (+e)\n";
