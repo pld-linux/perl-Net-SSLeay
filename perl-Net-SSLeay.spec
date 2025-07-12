@@ -40,7 +40,7 @@ aplikacji.
 
 %prep
 %setup -q -n Net-SSLeay-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 echo "n" | %{__perl} Makefile.PL %{_prefix} \
